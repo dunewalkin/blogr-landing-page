@@ -1,0 +1,149 @@
+@use "../abstracts/mixins" as *;
+
+button {
+   font-family: "Ubuntu", sans-serif;
+   cursor: pointer;
+   border: none;
+   transition: 0.2s all
+}
+
+.primary-btn {
+   font-size: 1rem;
+   font-weight: 700;
+   line-height: normal;
+   background: transparent;
+   color: hsl(var(--clr-neutral-1), .75);
+
+   &:hover,:focus {
+      color: hsl(var(--clr-neutral-1));
+      text-decoration: underline;
+      text-decoration-color: hsl(var(--clr-neutral-1));
+      text-underline-offset: 0.2rem;
+      text-decoration-thickness: 0.12rem;
+   }
+
+   @include mq (medium) {
+      font-family: Overpass;
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.75rem;
+      color: hsl(var(--clr-primary-3));
+      margin: 0 auto;
+
+      &:hover,:focus {
+         color: hsl(var(--clr-primary-3), .75);
+         text-decoration: none;
+      }
+   }
+}
+
+.dropbtn {
+   position: relative;
+   padding-right: 1rem;
+
+   &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../assets/images/icon-arrow-light.svg);
+      top: 40%;
+      right: 0;
+      width: 10px;
+      height: 7px;
+      opacity: .75;
+      transition: 0.2s all;
+
+      @include mq (medium) {
+         background-image: url("../assets/images/icon-arrow-dark.svg");
+      }
+   }
+
+   &:hover::after {
+      opacity: 1;
+   }
+}
+
+.active {
+   color: hsl(var(--clr-neutral-1));
+
+   &::after {
+      opacity: 1;
+      transform: rotate(180deg);
+   }
+
+   @include mq (medium) {
+      color: hsl(var(--clr-primary-3), .75);
+
+      &:hover,:focus {
+         color: hsl(var(--clr-primary-3));
+      }
+   }
+   
+}
+
+
+.secondary-btn {
+   width: 8.5625rem;
+   height: 3rem;
+   border-radius: 1.75rem;
+   font-weight: 700;
+}
+
+.group-btn {
+   color: hsl(var(--clr-primary-1));
+   background-color: hsl(var(--clr-neutral-1));
+
+   &:hover,:focus {
+      color: hsl(var(--clr-neutral-1));
+      background-color: hsl(var(--clr-primary-2));
+   }
+}
+
+.signup-wrapper {
+   & .group-btn {
+      @include mq (medium) {
+         color: hsl(var(--clr-neutral-1));
+         background: var(--back-gradient);
+
+         &:hover,:focus {
+            color: hsl(var(--clr-neutral-1));
+            background-color: hsl(var(--clr-primary-2));
+         }
+      }
+   }
+}
+
+.learn-btn {
+   color: hsl(var(--clr-neutral-1));
+   border: 1px solid hsl(var(--clr-neutral-1));
+   background: transparent;
+
+   &:hover,:focus {
+      color: hsl(var(--clr-primary-1));
+      background-color: hsl(var(--clr-neutral-1));
+   }
+}
+
+
+.mobile-nav-toggle {
+   display: none;
+
+   @include mq (medium) {
+   display: block;
+   position: absolute;
+   width: 2rem;
+   height: 1.125rem;
+   right: 1.5rem;
+   z-index: 20;
+   background-color: transparent;
+   background-image: url("../assets/images/icon-hamburger.svg");
+   background-repeat: no-repeat;
+   border: none;
+   cursor: pointer;
+   }
+} 
+
+.mobile-nav-toggle[aria-expanded="true"] {
+   width: 1.625rem;
+   height: 1.625rem;
+   background-image: url("../assets/images/icon-close.svg");
+}

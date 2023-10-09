@@ -1,0 +1,55 @@
+@use "../abstracts/mixins" as *;
+
+.section-3 {
+   padding-block: 18.81rem 19.25rem;
+   position: relative;
+   overflow: hidden;
+
+   @include mq(small) {
+      padding-block: 4.94rem 6.25rem;
+   }
+
+   &::after {
+      position: absolute;
+      content: '';
+      background-image: url(../assets/images/illustration-laptop-desktop.svg);
+      background-repeat: no-repeat;
+      top: 0;
+      left: 50%;
+      width: 55.56rem;
+      height: 49.125rem;
+      display: block;
+      transform: translate(-112%, 15%);
+
+      @include mq(small) {
+         background-image: none;
+      } 
+   }
+
+   & .features {
+      grid-column: 2;
+   }
+
+   .laptop-mobile-pic {
+      display: none;
+   
+      @include mq(small) {
+         display: block;
+         width: 20.375rem;
+         height: 20.375rem;
+         overflow: hidden;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-bottom: $pic-bottom;
+         
+         img {
+            position: absolute;
+            width: 30.375rem;
+            height: 22.2rem;
+            max-width: none;
+         }
+      } 
+   }
+}

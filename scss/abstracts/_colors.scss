@@ -1,0 +1,21 @@
+:root {
+   --clr-primary-1: 356, 100%, 66%;
+   --clr-primary-2: 355, 100%, 74%;
+   --clr-primary-3: 208, 49%, 24%;
+
+   --clr-neutral-1: 0, 0%, 100%;
+   --clr-neutral-2: 240, 2%, 79%;
+   --clr-neutral-3: 207, 13%, 34%;
+   --clr-neutral-4: 240, 10%, 16%;
+   --clr-neutral-5: 0, 0%, 98%;
+
+   --clr-border: 0, 7%, 90%;
+
+   --gradient-body-1: 237, 17%, 21%;
+   --gradient-body-2: 237, 23%, 32%;
+
+   --back-gradient: linear-gradient(135deg,hsl(var(--gradient-mobile-1))  0%,hsl(var(--gradient-mobile-2))  100%);
+
+   --gradient-mobile-1: 13, 100%, 72%;
+   --gradient-mobile-2: 353, 100%, 62%;
+ }

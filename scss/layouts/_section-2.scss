@@ -1,0 +1,93 @@
+@use "../abstracts/mixins" as *;
+
+.section-2 {
+   position: relative;
+}
+
+.section-wrapper-2 {
+   border-radius: 0rem 6.25rem;
+   background: linear-gradient(135deg, hsl(var(--gradient-body-1)) 0%, hsl(var(--gradient-body-2)) 100%);
+   overflow: hidden;
+
+   & h2,p {
+      color: hsl(var(--clr-neutral-1));
+   }
+
+   & h2 {
+      text-align: start;
+
+      @include mq(small) {
+         font-size: 2.5rem;
+         letter-spacing: -0.075rem;
+         line-height: 3.8rem;
+         text-align: center;
+      }
+   }
+}
+
+.section-background-2 {
+   background-image: url(../assets/images/bg-pattern-circles.svg);
+   background-repeat: no-repeat;
+   background-position: -53% 87%;
+   width: 100%;
+   height: 100%;
+
+   padding-block: 6.94rem;
+
+   @include mq(small) {
+      background-size: 37.625rem 37.75rem;;
+      padding-block: 13.81rem 5.81rem;
+      background-position: 50% -15rem;
+   }
+}
+
+.phones-pic {
+   grid-column: 1;
+   position: relative;
+
+   @include mq(small) {
+      width: 20.5rem;
+      height: 21.6875rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-7rem);
+      }
+   
+
+   & img {
+      display: block;
+      position: absolute;
+      left: -10%;
+      top: 0;
+      transform: translateY(-30%);
+
+      @include mq(small) {
+         left: auto;
+         width: 23.375rem;
+         height: 24.8rem;
+         max-width: none;
+         transform: translateY(-3%);
+         }
+      }
+}
+
+.infrastructure-content {
+   grid-column: 2;
+   max-width: $p-width;
+   gap: 1rem;
+}
+
+.section-front-2 {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   transform: translateY(27%);
+
+   @include mq(small) {
+      transform: translateY(-10%);
+   }
+}
