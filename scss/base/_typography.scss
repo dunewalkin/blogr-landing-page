@@ -8,11 +8,6 @@ body {
    letter-spacing: 0.03125rem;
    color: hsl(var(--clr-neutral-3));
    background-color: hsl(var(--clr-neutral-5));
-
-   // @include mq(medium) {
-   //    font-size: 1rem;
-   //    line-height: 1.75rem;
-   // } 
 }
 
 .heading-xl {
